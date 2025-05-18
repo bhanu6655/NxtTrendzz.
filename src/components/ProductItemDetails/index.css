@@ -1,0 +1,122 @@
+/* Write your CSS here */
+.product-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+.product-image {
+  height: 550px;
+  width: 35%;
+  margin: 25px;
+  padding: 15px;
+  border-radius: 25px;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+.product-title {
+  font-family: 'Roboto';
+  font-size: 35px;
+  font-weight: bold;
+  color: #475569;
+  margin: 0px;
+  padding: 0px;
+}
+.product-price {
+  font-weight: bold;
+  font-size: 25px;
+}
+.rating-section {
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  height: 35px;
+  width: 65px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+.star-image {
+  height: 15px;
+  width: 15px;
+}
+.rating-reviews {
+  display: flex;
+}
+.reviews {
+  font-family: 'Roboto';
+  margin: 8px;
+}
+
+.product-description {
+  color: #616e7c;
+  font-family: 'Roboto';
+  text-align: flex-start;
+}
+.availability {
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.avalilable {
+  color: #616e7c;
+  font-family: 'Roboto';
+}
+.brand {
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+.brand-name {
+  color: #616e7c;
+  font-family: 'Roboto';
+}
+.horizantal-line {
+  width: 75%;
+  margin: 15px;
+}
+.buttons-section {
+  display: flex;
+}
+
+.buttons {
+  border: 0px none transparent;
+  background-color: transparent;
+}
+.minus {
+  height: 35px;
+  width: 34px;
+}
+.count {
+  font-family: 'Roboto';
+  color: #616e7c;
+  font-size: 18px;
+}
+.add-to-cart-button {
+  background-color: #3b82f6;
+  border: 0px solid #3b82f6;
+  color: white;
+  font-family: 'Roboto';
+  padding: 10px;
+  border-radius: 10px;
+}
+.similar-products-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.similar-products-heading {
+  padding-left: 35px;
+  font-family: 'Roboto';
+}
+.similar-products-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
