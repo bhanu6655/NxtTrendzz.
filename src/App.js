@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
@@ -11,43 +11,15 @@ import ProtectedRoute from './components/ProtectedRoute'
 import './App.css'
 
 const App = () => (
-  <Routes>
-    <Route path="/login" element={<LoginForm />} />
-    <Route
-      path="/"
-      element={
-        <ProtectedRoute>
-          <Home />
-        </ProtectedRoute>
-      }
-    />
-    <Route
-      path="/products"
-      element={
-        <ProtectedRoute>
-          <Products />
-        </ProtectedRoute>
-      }
-    />
-    <Route
-      path="/products/:id"
-      element={
-        <ProtectedRoute>
-          <ProductItemDetails />
-        </ProtectedRoute>
-      }
-    />
-    <Route
-      path="/cart"
-      element={
-        <ProtectedRoute>
-          <Cart />
-        </ProtectedRoute>
-      }
-    />
-    <Route path="/not-found" element={<NotFound />} />
-    <Route path="*" element={<Navigate to="/not-found" replace />} />
-  </Routes>
+  <Switch>
+    <Route exact path="/login" component={LoginForm} />
+    <ProtectedRoute exact path="/" component={Home} />
+    <ProtectedRoute exact path="/products" component={Products} />
+    <ProtectedRoute exact path="/products/:id" component={ProductItemDetails} />
+    <ProtectedRoute exact path="/cart" component={Cart} />
+    <Route path="/not-found" component={NotFound} />
+    <Redirect to="not-found" />
+  </Switch>
 )
 
 export default App

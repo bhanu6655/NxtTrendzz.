@@ -1,14 +1,14 @@
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
+
 import Cookies from 'js-cookie'
 
 import './index.css'
 
-const Header = () => {
-  const navigate = useNavigate()
-
+const Header = props => {
   const onClickLogout = () => {
+    const {history} = props
     Cookies.remove('jwt_token')
-    navigate('/login', {replace: true})
+    history.replace('/login')
   }
 
   return (
@@ -22,15 +22,12 @@ const Header = () => {
               alt="website logo"
             />
           </Link>
-          <button
-            type="button"
-            className="nav-mobile-btn"
-            onClick={onClickLogout}
-          >
+          <button type="button" className="nav-mobile-btn">
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
               alt="nav logout"
               className="nav-bar-image"
+              onClick={onClickLogout}
             />
           </button>
         </div>
@@ -107,4 +104,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withRouter(Header)

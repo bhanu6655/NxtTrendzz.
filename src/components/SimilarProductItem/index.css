@@ -1,3 +1,4 @@
+/* Write your CSS here */
 .similar-product-item {
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@
   }
 }
 
-.similar-product-img {
+.similar-product-image {
   width: 200px;
   border-radius: 8px;
 }
